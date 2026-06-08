@@ -152,8 +152,11 @@ body {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-1px);
-  transition: opacity 0.2s ease 0s, transform 0.2s ease 0s, visibility 0s linear 0s;
-  z-index: 20;;
+  transition:
+    opacity 0.2s ease 0s,
+    transform 0.2s ease 0s,
+    visibility 0s linear 0s;
+  z-index: 20;
 }
 
 .github-hover-wrapper.hover-active .github-tooltip {
@@ -328,4 +331,3 @@ html.light .border-outline-variant {
   color: white !important;
   transition: color 0.3s ease-in-out;
 }
-
