@@ -44,12 +44,23 @@ body {
 }
 
 .social-row:hover {
-  transition: all 0.0s ease;
+  transition: all 0s ease;
   transform: scale(1.02);
 }
 
 .social-row:active {
   transform: scale(0.98);
+}
+
+.social-row-arrow {
+  font-size: var(--social-arrow-size, 1.8rem);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-row .social-row-arrow {
+  margin-left: auto;
 }
 
 .youtube-hover-effect {
