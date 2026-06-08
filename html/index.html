@@ -160,8 +160,10 @@
         >
           <img
             alt="The_Pkvinh0 Profile Photo"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover profile-photo"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7_LGT0oVShvZdJrQf727O6FwpoY6TTD8L4Y8xFD2bC7D853Znz8ZVW5L43B5h0AT9I7iZkylPRWxE_rTCSJzjFvKhtMxn58zAMjLzQR5enU0-rLBzPAEscwC5SVT-pFpEIyMCZ_fYr-KkbF1XzqgVnrG-dstyUMxrhkJ-O3ZaSmAg9CcfTLNa7elwbCNpNNgARZ5i6-n044Ea_hjuKRfrpJobtHRgYFA9QrNN4g4LGnWMb0Ij7fQsjUU_Vy_10RMl0J3z1J7N1Gg"
+            data-src-dark="/img/ChatGPT Image 3 de jun. de 2026, 11_34_35.png"
+            data-src-light="/img/ChatGPT Image 3 de jun. de 2026, 11_36_58.png"
           />
         </div>
         <span
@@ -169,12 +171,22 @@
           >Brayan-[DEV]</span
         >
       </div>
-      <button
-        class="material-symbols-outlined text-primary-container p-2 active:scale-95 transition-transform duration-200"
-        data-icon="menu"
-      >
-        menu
-      </button>
+      <div class="flex items-center gap-2">
+        <button
+          id="theme-toggle"
+          class="material-symbols-outlined theme-toggle p-2 active:scale-95 transition-transform duration-200"
+          aria-label="Alternar tema"
+          title="Alternar tema claro/escuro"
+        >
+          light_mode
+        </button>
+        <button
+          class="material-symbols-outlined text-primary-container p-2 active:scale-95 transition-transform duration-200"
+          data-icon="menu"
+        >
+          menu
+        </button>
+      </div>
     </header>
     <main class="pt-24 pb-32">
       <!-- Hero Section -->
@@ -189,8 +201,10 @@
           ></div>
           <img
             alt="The_Pkvinh0 Centered Profile Photo"
-            class="w-full h-full object-cover border-4 border-surface relative z-10 rounded-full"
+            class="w-full h-full object-cover border-4 border-surface relative z-10 rounded-full profile-photo"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXMC0ycVIuQQ5lLMH7zCd_3FnThpSZlg6uOogy8sCcZflFSfi6_NwECXRxfh7PSZSjviVn8lNGd0TMRQt0IHy5WgJ9yB_7jEUPwPxbmywbwMXV3BsZvUmC-AfJf-28o6DpkNq8wIecGZQnT7D8sv_dkJhHFQd2hAf-_NHVE3R0NK7uWbf2ZASdYEjh7rTvYO5cJvv0VDYpO5k-d1NKBosUZph3Bwn7ApgMMNhs-MqUSQ5kIolxoHD9MVrWxEeKAA5HFsykRGD1Z_I"
+            data-src-dark="/img/ChatGPT Image 3 de jun. de 2026, 11_34_35.png"
+            data-src-light="/img/ChatGPT Image 3 de jun. de 2026, 11_36_58.png"
           />
         </div>
         <div
@@ -385,7 +399,7 @@
               <button
                 class="flex items-center gap-2 text-primary-container font-cta text-cta group-hover:gap-4 transition-all"
               >
-                Ver Projeto.
+                Ver Projeto
                 <span class="material-symbols-outlined">arrow_forward</span>
               </button>
             </div>
@@ -408,32 +422,39 @@
         </div>
         <div class="flex flex-col border-t glass-border">
           <!-- GitHub -->
-          <a
-            class="social-row flex items-center justify-between px-margin-mobile md:px-margin-desktop bg-surface border-b glass-border hover:bg-surface-container group transition-all duration-300 ease-out opacity-100 translate-y-0 py-12 hover:scale-[1.02] github-hover-effect active:scale-[0.98]"
-            href="https://github.com/devsenacbrayanlevy-creator"
-          >
-            <div class="flex items-center gap-6">
-              <span
-                class="material-symbols-outlined text-3xl social-icon transition-colors duration-300"
-                data-icon="code"
-                style="color: rgb(255, 255, 255)"
-                >code</span
-              >
-              <div class="flex flex-col md:flex-row md:items-center md:gap-4">
+          <div class="github-hover-wrapper relative">
+            <a
+              class="social-row flex items-center justify-between px-margin-mobile md:px-margin-desktop bg-surface border-b glass-border hover:bg-surface-container group transition-all duration-300 ease-out opacity-100 translate-y-0 py-12 hover:scale-[1.02] github-hover-effect active:scale-[0.98]"
+              href="https://github.com/devsenacbrayanlevy-creator"
+            >
+              <div class="flex items-center gap-6">
                 <span
-                  class="font-headline-md text-headline-md industrial-text tracking-tighter"
-                  >GitHub</span
+                  class="material-symbols-outlined text-3xl social-icon transition-colors duration-300"
+                  data-icon="code"
+                  style="color: rgb(255, 255, 255)"
+                  >code</span
+                >
+                <div class="flex flex-col md:flex-row md:items-center md:gap-4">
+                  <span
+                    class="font-headline-md text-headline-md industrial-text tracking-tighter"
+                    >GitHub</span
+                  >
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-4 text-on-surface-variant group-hover:text-primary-container transition-all duration-300"
+              >
+                <span class="material-symbols-outlined social-row-arrow"
+                  >arrow_forward</span
                 >
               </div>
+            </a>
+            <div class="github-tooltip">
+              <p class="text-sm text-on-surface-variant">
+                Acesse meu GitHub para ver projetos e código.
+              </p>
             </div>
-            <div
-              class="flex items-center gap-4 text-on-surface-variant group-hover:text-primary-container transition-all duration-300"
-            >
-              <span class="material-symbols-outlined social-row-arrow"
-                >arrow_forward</span
-              >
-            </div>
-          </a>
+          </div>
           <!-- LinkedIn -->
           <a
             class="social-row flex items-center justify-between px-margin-mobile md:px-margin-desktop bg-surface border-b glass-border hover:bg-surface-container group transition-all duration-300 ease-out opacity-100 translate-y-0 py-12 hover:scale-[1.02] linkedin-hover-effect active:scale-[0.98]"
@@ -544,34 +565,9 @@
         </div>
       </section>
     </main>
-    <!-- BottomNavBar (Mobile Only) -->
-    <nav
-      class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-surface border-t border-outline-variant rounded-t-xl"
-    >
-      <div
-        class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full p-2 active:scale-90 transition-all duration-150"
-      >
-        <span class="material-symbols-outlined" data-icon="home">home</span>
-      </div>
-      <div
-        class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-secondary-container rounded-full active:scale-90 transition-all duration-150"
-      >
-        <span class="material-symbols-outlined" data-icon="work">work</span>
-      </div>
-      <div
-        class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-secondary-container rounded-full active:scale-90 transition-all duration-150"
-      >
-        <span class="material-symbols-outlined" data-icon="person">person</span>
-      </div>
-      <div
-        class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-secondary-container rounded-full active:scale-90 transition-all duration-150"
-      >
-        <span class="material-symbols-outlined" data-icon="mail">mail</span>
-      </div>
-    </nav>
     <!-- Footer -->
     <footer
-      class="w-full py-stack-md px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-unit bg-surface-container border-t border-outline-variant mb-16 md:mb-0"
+      class="w-full py-stack-md px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-unit bg-surface-container border-t border-outline-variant md:mb-0"
     >
       <p
         class="font-label-bold text-label-bold industrial-text text-on-surface-variant"

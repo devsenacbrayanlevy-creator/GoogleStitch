@@ -137,6 +137,31 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
+.github-hover-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
+.github-tooltip {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  min-width: 180px;
+  background: #ffffff;
+  padding: 0.85rem 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-1px);
+  transition: opacity 0.2s ease 0s, transform 0.2s ease 0s, visibility 0s linear 0s;
+  z-index: 20;;
+}
+
+.github-hover-wrapper.hover-active .github-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 .linkedin-hover-effect {
   position: relative;
   overflow: hidden;
@@ -218,6 +243,55 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
+/* Theme: Light overrides when html has .light */
+html.light body {
+  background-color: #e7e7e7;
+  color: #111111;
+}
+
+html.light header,
+html.light footer,
+html.light nav {
+  background-color: #e7e7e7;
+  color: #111111;
+}
+
+html.light .bg-surface {
+  background-color: #e7e7e7 !important;
+}
+
+html.light .bg-surface-container,
+html.light .surface-container {
+  background-color: #f7f7f7 !important;
+}
+
+html.light .text-on-surface,
+html.light .text-on-surface-variant {
+  color: #111111 !important;
+}
+
+html.light .glass-border {
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+html.light .border-outline-variant {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 1.6rem;
+}
+
+.theme-toggle:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+}
+
 .whatsapp-hover-effect {
   position: relative;
   overflow: hidden;
@@ -254,3 +328,4 @@ body {
   color: white !important;
   transition: color 0.3s ease-in-out;
 }
+
